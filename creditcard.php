@@ -15,7 +15,7 @@ class creditCard
     function validateCard()
     {
         $today = new \DateTime('midnight');
-        $expiration_dateTime = \DateTime::createFromFormat("m/y", $this->$expiration);
+        $expiration_dateTime = \DateTime::createFromFormat("m/y", $this->deadlineCard);
         return $today < $expiration_dateTime;
     }
 }
